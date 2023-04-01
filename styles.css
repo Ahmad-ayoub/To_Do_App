@@ -1,0 +1,52 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#taskList {
+  display: none;
+}
+/*
+.controlIcon {
+  display: none;
+}
+*/
+body {
+  background-color: grey;
+}
+
+.Title {
+  color: green;
+  text-align: center;
+  font-size: 8vh;
+}
+
+.to_Do {
+  transform: translate(82vh);
+  display: inline-block;
+  padding-bottom: 2%;
+}
+
+.task {
+  display: block;
+  align-items: center;
+  background-color: lightgreen;
+  width: 8%;
+  transform: translate(87vh, 10px);
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.newTask {
+  text-align: center;
+  background-color: lightgreen;
+  width: 8%;
+  transform: translate(87vh, 10px);
+}
+
+.spaceCheck {
+  transform: translate(-3vh);
+}
+
+.cross {
+  text-decoration: line-through;
+}
