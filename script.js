@@ -8,11 +8,11 @@ let crossTask = document.getElementById("taskCheck");
 let deleteIcon = document.getElementById("deleteIcon");
 let tasksContainer = document.getElementById("tasksContainer");
 
-taskForm.addEventListener("submit", startGame);
+taskForm.addEventListener("submit", startApp);
 
 let newValue = "";
 
-function startGame(event) {
+function startApp(event) {
   event.preventDefault();
   getInput();
   addTask();
@@ -54,20 +54,13 @@ function addTask() {
   adjustTaskBtn(taskContainer, taskCheck, taskLabel, deleteIcon, taskCSS);
 }
 
-function adjustTaskBtn(
-  taskContainer,
-  taskCheck,
-  taskLabel,
-  deleteIcon,
-  taskCSS
-) {
+function adjustTaskBtn(taskContainer) {
   if (newValue.length > 5) {
     let newWidth = 8 + newValue.length * 0.2;
     taskContainer.style.width = newWidth + "%";
   }
 }
 
-//debugger;
 function crossInput(taskCheck, taskLabel, deleteIcon) {
   if (taskCheck.checked) {
     taskLabel.classList.add("cross");
