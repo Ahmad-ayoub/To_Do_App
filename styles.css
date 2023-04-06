@@ -5,16 +5,12 @@
 #taskList {
   display: none;
 }
-/*
-.controlIcon {
-  display: none;
-}
-*/
+
 body {
   background-color: grey;
 }
 
-.Title {
+.title {
   color: green;
   text-align: center;
   font-size: 8vh;
