@@ -3,6 +3,7 @@
 A simple To Do App that allows you to add tasks you wish to accomplish and have the ability to cross them off and delete them.
 
 With a simple display it gives you the ability to add whatever task you like in literary format and to add it below with the add button.
+I also added a simple feature were no matter how many words you add it will stay on the same line when it's entered and when you cross the word.
 
 You can access it [here](https://ahmad-ayoub.github.io/To_Do_App/)
 
