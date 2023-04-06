@@ -12,7 +12,7 @@ function submitTask(event) {
   getInput();
   createTaskElement();
   newTask.value = "";
-  adjustTaskBtn();
+  //adjustTaskBtn();
 }
 
 function getInput() {
@@ -24,12 +24,12 @@ function createTaskElement() {
   const taskContainer = document.createElement("div");
   taskContainer.classList.add("task");
 
-  const taskCheck = createTaskCheck(taskCheck, taskLabel, deleteIcon);
-
   const taskLabel = document.createElement("label");
   taskLabel.textContent = `${newValue}`;
 
   const deleteIcon = createDeleteButton(taskContainer);
+
+  const taskCheck = createTaskCheck(taskLabel, deleteIcon);
 
   taskContainer.appendChild(taskCheck);
   taskContainer.appendChild(taskLabel);
@@ -45,7 +45,7 @@ function adjustTaskBtn(taskContainer) {
     taskContainer.style.width = `${newWidth}%`;
   }
 }
-
+//debugger;
 function crossOutTask(taskCheck, taskLabel, deleteIcon) {
   if (taskCheck.checked) {
     taskLabel.classList.add("cross");
@@ -61,7 +61,7 @@ function deleteTask(tasksContainer) {
 }
 
 function createDeleteButton(taskContainer) {
-  const deleteIcon = document.createElement("i");
+  deleteIcon = document.createElement("i");
   deleteIcon.className = "fa-solid fa-xmark";
   deleteIcon.style.display = "none";
   deleteIcon.style.marginLeft = "6vh";
@@ -72,10 +72,12 @@ function createDeleteButton(taskContainer) {
   return deleteIcon;
 }
 
-function createTaskCheck(taskCheck, taskLabel, deleteIcon) {
-  const taskCheck = document.createElement("input");
+function createTaskCheck(taskLabel, deleteIcon) {
+  taskCheck = document.createElement("input");
   taskCheck.type = "checkbox";
   taskCheck.addEventListener("change", function () {
     crossOutTask(taskCheck, taskLabel, deleteIcon);
   });
+
+  return taskCheck;
 }
