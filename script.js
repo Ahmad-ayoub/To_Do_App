@@ -12,7 +12,6 @@ function submitTask(event) {
   getInput();
   createTaskElement();
   newTask.value = "";
-  //adjustTaskBtn();
 }
 
 function getInput() {
@@ -45,7 +44,7 @@ function adjustTaskBtn(taskContainer) {
     taskContainer.style.width = `${newWidth}%`;
   }
 }
-//debugger;
+
 function crossOutTask(taskCheck, taskLabel, deleteIcon) {
   if (taskCheck.checked) {
     taskLabel.classList.add("cross");
